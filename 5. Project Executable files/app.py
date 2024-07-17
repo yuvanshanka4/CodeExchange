@@ -11,7 +11,7 @@ chat_model = "models/chat-bison-001"
 
 def translate_code(source_code, source_lang, target_lang):
     context = f"You are a highly skilled software developer with expertise in multiple programming languages. Translate the following {source_lang} code to {target_lang}. Ensure that the functionality remains the same and that you follow best practices and idioms of the {target_lang} language.I want you to give only the code no need any other explainations.\n\n {source_code}"
-    response = palm.chat(model=chat_model,messages=[context])
+    response = palm.chat(model=chat_model,messages=[context],temperature=0)
     return str(response.candidates[0]["content"][3:len(response.candidates[0]["content"])-4])
 
 st.set_page_config(layout="wide")  # Set the layout to wide
