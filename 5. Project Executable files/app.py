@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as palm
 
 # Path to your service account key file
-palm.configure(api_key="AIzaSyDz8XovaQXALRxmp0PKAnRMHJqa2KmBbuU")
+palm.configure(api_key="YOUR_API_KEY")
 
 
 
